@@ -1,0 +1,78 @@
+﻿ActivityId;Process;Ref. Unit;CO2eq_kg;Category
+1;Additives/Blending Components;EUR;0,657714011;Seasoning & Additivies
+2;Air transport services;EUR;1,515615503;Air transport services
+3;Aluminium and aluminium products;EUR;0,928844365;Metal
+4;Animal products nec;EUR;0,756289881;Animal products nec
+5;average of all flows;EUR;8,293649781;average of all flows
+6;average of all flows in exiobase;EUR;8,293649781;average of all flows in exiobase
+7;Basic iron and steel and of ferro-alloys and first products thereof;EUR;1,70228939;Metal
+8;Beverages;EUR;0,401636782;Beverages
+9;Ceramic goods;EUR;0,661544072;Ceramic goods
+10;Cereal grains nec;EUR;0,346115452;Flour & Grain
+11;Charcoal;EUR;0,92975446;Charcoal
+12;Chemicals nec;EUR;1,110864131;Chemicals nec
+13;Collected and purified water, distribution services of water;EUR;1,143157119;Collected and purified water, distribution services of water
+14;Computer and related services;EUR;0,253521574;Computer and related services
+15;Construction work;EUR;0,650810222;Construction work
+16;Copper products;EUR;0,471882138;Metal
+17;Crops nec;EUR;0,431640837;Crops nec
+18;Dairy products;EUR;0,421912074;Dairy & Egg
+19;Distribution services of gaseous fuels through mains;EUR;2,429087198;Distribution services of gaseous fuels through mains
+20;Education services;EUR;0,249605369;Education services
+21;Electrical machinery and apparatus n.e.c. ;EUR;0,539460795;Electrical machinery and apparatus n.e.c. 
+22;Electricity nec;EUR;0,733077891;Electricity nec
+23;Fabricated metal products, except machinery and equipment;EUR;0,618308039;Metal
+24;Financial intermediation services, except insurance and pension funding services;EUR;0,162088188;Financial intermediation services, except insurance and pension funding services
+25;Fish products;EUR;0,509336464;Fish products
+26;Food products nec;EUR;0,403785545;Food products nec
+27;"Furniture; other manufactured goods n.e.c.";EUR;1,234611069;"Furniture; other manufactured goods n.e.c."
+28;Gas/Diesel Oil;EUR;1,785329463;Gas/Diesel Oil
+29;Glass and glass products;EUR;0,944473135;Glass
+30;Health and social work services;EUR;0,29850535;Health and social work services
+31;Hotel and restaurant services;EUR;0,286053349;Hotel and restaurant services
+32;Inland water transportation services;EUR;1,418215038;Inland water transportation services
+33;Insurance and pension funding services, except compulsory social security services;EUR;0,222983702;Insurance and pension funding services, except compulsory social security services
+34;Lead, zinc and tin and products thereof;EUR;0,522921238;Metal
+35;Lubricants;EUR;1,694233776;Lubricants
+36;Machinery and equipment n.e.c.;EUR;0,551666889;Machinery and equipment n.e.c.
+37;Meat animals nec;EUR;0,289441152;Meat animals nec
+38;Meat products nec;EUR;4,355986986;Meat
+39;Medical, precision and optical instruments, watches and clocks;EUR;0,885253854;Medical, precision and optical instruments, watches and clocks
+40;Membership organisation services n.e.c.;EUR;0,463174215;Membership organisation services n.e.c.
+41;Motor Gasoline;EUR;1,603930773;Motor Gasoline
+42;Natural gas and services related to natural gas extraction, excluding surveying;EUR;12,48018163;Natural gas and services related to natural gas extraction, excluding surveying
+43;Natural Gas Liquids;EUR;4,709576301;Natural Gas Liquids
+44;Non-specified Petroleum Products;EUR;0,94406536;Non-specified Petroleum Products
+45;Office machinery and computers;EUR;0,441580604;Office machinery and computers
+46;Oil seeds;EUR;0,790424895;Fats & Oils
+47;Other business services;EUR;0,252956229;Other business services
+48;Other land transportation services;EUR;0,418206851;Other land transportation services
+49;Other non-ferrous metal products;EUR;0,673392472;Other non-ferrous metal products
+50;Other services;EUR;0,381375124;Other services
+51;Paper and paper products;EUR;0,728061724;Paper & Carton
+52;Plant-based fibers;EUR;5,164926383;Paper & Carton
+53;Plastics, basic;EUR;0,616576821;Plastic
+54;Post and telecommunication services;EUR;0,196588495;Post and telecommunication services
+55;Precious metals;EUR;0,321412154;Metal
+56;Printed matter and recorded media;EUR;0,358494972;Printed matter and recorded media
+57;Products of meat cattle;EUR;0,420485946;Products of meat cattle
+58;products of Vegetable oils and fats;EUR;0,392975655;Fats & Oils
+59;"Public administration and defence services; compulsory social security services";EUR;0,284318244;"Public administration and defence services; compulsory social security services"
+60;Radio, television and communication equipment and apparatus;EUR;0,349337707;Radio, television and communication equipment and apparatus
+61;Real estate services;EUR;0,156617103;Real estate services
+62;Recreational, cultural and sporting services;EUR;0,343234762;Recreational, cultural and sporting services
+63;Renting services of machinery and equipment without operator and of personal and household goods;EUR;0,085877954;Renting services of machinery and equipment without operator and of personal and household goods
+64;Research and development services;EUR;0,373282518;Research and development services
+65;Rubber and plastic products;EUR;1,060553626;Plastic
+66;Sale, maintenance, repair of motor vehicles, motor vehicles parts, motorcycles, motor cycles parts and accessoiries;EUR;0,322689422;Sale, maintenance, repair of motor vehicles, motor vehicles parts, motorcycles, motor cycles parts and accessoiries
+67;Sea and coastal water transportation services;EUR;2,661206931;Sea and coastal water transportation services
+68;Secondary raw materials;EUR;8,60502381;Secondary raw materials
+69;Services auxiliary to financial intermediation;EUR;0,18508006;Services auxiliary to financial intermediation
+70;Steam and hot water supply services;EUR;103,9029934;Steam and hot water supply services
+71;Sugar;EUR;0,339257186;Sweeteners
+72;"Supporting and auxiliary transport services; travel agency services";EUR;0,364568745;"Supporting and auxiliary transport services; travel agency services"
+73;Textiles;EUR;0,426774739;Textiles
+74;Transportation services via pipelines;EUR;2,661124036;Transportation services via pipelines
+75;Vegetables, fruit, nuts;EUR;0,322466755;Fruit, Berry & Vegetable
+76;Wholesale trade and commission trade services, except of motor vehicles and motorcycles;EUR;0,348797617;Wholesale trade and commission trade services, except of motor vehicles and motorcycles
+77;Wood and products of wood and cork;EUR;0,553205799;Wood and products of wood and cork

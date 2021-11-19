@@ -18,8 +18,6 @@ if __name__ == "__main__":
 
             price = float(price.replace(",", "."))
             quantity = float(quantity.replace(",", "."))
-            if price < 0 or quantity < 0:
-                continue
 
             if uom == "G":
                 quantity = quantity / 1000
