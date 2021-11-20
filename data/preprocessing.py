@@ -42,11 +42,18 @@ if __name__ == "__main__":
                 average_prices[key]["product"] = product
 
     data = []
-    for _, values in average_prices.items():
-        data.append(values)
-
+    with open("sample_data.csv") as csv_file:
+        reader = csv.DictReader(csv_file, delimiter=";")
+        for row in reader:
+            data.append(row)
     with open('sievo_spend_data_preprocessed.json', 'w') as f:
         json.dump(data , f)
+    # data = []
+    # for _, values in average_prices.items():
+    #     data.append(values)
+# 
+    # with open('sievo_spend_data_preprocessed.json', 'w') as f:
+    #     json.dump(data , f)
    # with open("sievo_spend_data_preprocessed.csv", "w", newline="") as csv_file:
    #     fieldnames = [
    #         "vendor",
