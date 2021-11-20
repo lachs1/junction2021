@@ -32,7 +32,18 @@
   flex-direction: column;
 }
 
+.Wrapper {
+  display: flex;
+  padding: 1em;
+  height: 33%;
+}
+
 .Controls {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #000000;
 }
 
 .Form {
@@ -60,19 +71,25 @@
 }
 
 .Error {
-  font-size: 2em;
-  padding-top: 10em;
+  padding-top: 1em;
   align-self: center;
 }
 
 .VendorData {
-  overflow-y: scroll;
-  height: 100%;
   display: flex;
   border: none;
   flex-direction: column;
-  padding-top: 2em;
   flex: 1;
+  
+  background-color: white;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #000000;
+  overflow-y: scroll;
+}
+
+.VendorData::-webkit-scrollbar {
+  display: none;
 }
 
 tr:nth-child(even) {
@@ -105,8 +122,39 @@ tr:hover {
   padding: 0.3em;
 }
 
+.BestVendorDataWrapper {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: white;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #000000;
+}
+
 .BestVendorData {
   flex: 1;
-  height: 100px;
+  flex-direction: row;
   padding: 1em;
+  display: flex;
+}
+
+.Chart {
+  flex: 1;
+}
+
+.BestVendorDataBox {
+  flex-direction: column;
+  display: flex;
+  background-color: white;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #000000;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0;
 }

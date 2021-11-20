@@ -4,7 +4,7 @@ import './App.css';
 import logo from './img/sievo-sustainable-solutions-transparent.png';
 import Data from './data/sievo_spend_data_preprocessed.json';
 
-import { Pie } from 'react-chartjs-2';
+import { Pie, Bar } from 'react-chartjs-2';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -14,10 +14,12 @@ export default class App extends React.Component {
       quantity: 10,
       data: Data,
       filteredData: [],
+      selectedIndex: 0,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleVendorClick = this.handleVendorClick.bind(this);
   }
 
   handleChange(event) {
@@ -35,11 +37,18 @@ export default class App extends React.Component {
     });
   }
 
+  handleVendorClick(index) {
+    this.setState({
+      selectedIndex: index,
+    });
+  }
+
   render() {
-    const { product, quantity, data } = this.state;
+    const { product, quantity, data, selectedIndex } = this.state;
     let filteredData = [];
     let vendorTable;
     let chartData;
+    let barChartData;
 
     if (product && quantity > 0) {
       data.forEach((row) => {
@@ -101,6 +110,7 @@ export default class App extends React.Component {
             {filteredData.map((row, index) => {
               return (
                 <tr
+                  onClick={() => this.handleVendorClick(index)}
                   key={index}
                   className={index === 0 ? 'VendorTableBest' : ''}
                 >
@@ -134,12 +144,39 @@ export default class App extends React.Component {
         ],
         datasets: [
           {
-            data: [filteredData[0].co2_kg_kg, filteredData[0].min],
+            data: [
+              filteredData[selectedIndex].co2_kg_kg,
+              filteredData[selectedIndex].min,
+            ],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
             ],
             borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+            borderWidth: 1,
+          },
+        ],
+      };
+      barChartData = {
+        labels: ['Airplane', 'Truck', 'Ship'],
+        datasets: [
+          {
+            label: [],
+            data: [
+              filteredData[selectedIndex].transport.air,
+              filteredData[selectedIndex].transport.truck,
+              filteredData[selectedIndex].transport.sea,
+            ],
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+            ],
+            borderColor: [
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+            ],
             borderWidth: 1,
           },
         ],
@@ -164,65 +201,120 @@ export default class App extends React.Component {
           </div>
         </div>
         <div className='Dashboard'>
-          <div className='Controls'>
-            <img src={logo} alt='Logo' height={80} />
-            <form onSubmit={this.handleSubmit} className='Form'>
-              <div className='FormRow'>
-                <label htmlFor='product' className='FormLabel'>
-                  Product
-                </label>
-                <input
-                  type='text'
-                  id='product'
-                  name='product'
-                  placeholder='Tomato'
-                  minLength={1}
-                  maxLength={30}
-                  value={product}
-                  onChange={this.handleChange}
-                  className='FormInput'
-                ></input>
-              </div>
-              <div className='FormRow'>
-                <label htmlFor='destination' className='FormLabel'>
-                  Destination
-                </label>
-                <select
-                  name='destination'
-                  id='destination'
-                  className='FormInput'
-                >
-                  <option value='finland'>Helsinki, Finland</option>
-                  <option value='more'>More coming soon...</option>
-                </select>
-              </div>
-              <div className='FormRow'>
-                <label htmlFor='quantity' className='FormLabel'>
-                  Quantity (kg)
-                </label>
-                <input
-                  type='number'
-                  id='quantity'
-                  name='quantity'
-                  minLength={1}
-                  maxLength={30}
-                  value={quantity}
-                  onChange={this.handleChange}
-                  className='FormInput'
-                ></input>
-              </div>
-            </form>
-          </div>
-          <div className='VendorData'>{vendorTable}</div>
-          {product && quantity && (
-            <div className='BestVendorData'>
-              <Pie
-                data={chartData}
-                width={'30%'}
-                options={{ maintainAspectRatio: false }}
-              ></Pie>
+          <div className='Wrapper'>
+            <div className='Controls'>
+              <img src={logo} alt='Logo' height={80} />
+              <form onSubmit={this.handleSubmit} className='Form'>
+                <div className='FormRow'>
+                  <label htmlFor='product' className='FormLabel'>
+                    Product
+                  </label>
+                  <input
+                    type='text'
+                    id='product'
+                    name='product'
+                    placeholder='Tomato'
+                    minLength={1}
+                    maxLength={30}
+                    value={product}
+                    onChange={this.handleChange}
+                    className='FormInput'
+                  ></input>
+                </div>
+                <div className='FormRow'>
+                  <label htmlFor='destination' className='FormLabel'>
+                    Destination
+                  </label>
+                  <select
+                    name='destination'
+                    id='destination'
+                    className='FormInput'
+                  >
+                    <option value='finland'>Helsinki, Finland</option>
+                    <option value='more'>More coming soon...</option>
+                  </select>
+                </div>
+                <div className='FormRow'>
+                  <label htmlFor='quantity' className='FormLabel'>
+                    Quantity (kg)
+                  </label>
+                  <input
+                    type='number'
+                    id='quantity'
+                    name='quantity'
+                    minLength={1}
+                    maxLength={30}
+                    value={quantity}
+                    onChange={this.handleChange}
+                    className='FormInput'
+                  ></input>
+                </div>
+              </form>
             </div>
-          )}
+          </div>
+          <div className='Wrapper'>
+            <div className='VendorData'>{vendorTable}</div>
+          </div>
+          <div className='Wrapper'>
+            <div className='BestVendorDataBox'>
+              {product && quantity ? (
+                <h2>{filteredData[selectedIndex].vendor}</h2>
+              ) : (
+                <div className='Error'>
+                  Please select a product and quantity.
+                </div>
+              )}
+              {product && quantity && (
+                <div className='BestVendorData'>
+                  <div className='Chart'>
+                    <Pie
+                      data={chartData}
+                      width={'50%'}
+                      options={{
+                        maintainAspectRatio: false,
+                        plugins: {
+                          legend: {
+                            position: 'bottom',
+                          },
+                          title: {
+                            display: true,
+                            text: 'CO₂ emissions by category (kg)',
+                          },
+                        },
+                      }}
+                    ></Pie>
+                  </div>
+                  <div className='Chart'>
+                    <Bar
+                      data={barChartData}
+                      width={'50%'}
+                      options={{
+                        maintainAspectRatio: false,
+                        indexAxis: 'x',
+                        // Elements options apply to all of the options unless overridden in a dataset
+                        // In this case, we are setting the border of each horizontal bar to be 2px wide
+                        elements: {
+                          bar: {
+                            borderWidth: 2,
+                          },
+                        },
+                        responsive: true,
+                        plugins: {
+                          legend: {
+                            display: false,
+                          },
+                          title: {
+                            display: true,
+                            text: 'Transportation CO₂ emissions (kg)',
+                          },
+                        },
+                      }}
+                    ></Bar>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     );
