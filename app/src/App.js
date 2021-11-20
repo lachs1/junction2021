@@ -211,7 +211,7 @@ export default class App extends React.Component {
         <div className='Dashboard'>
           <div className='Wrapper'>
             <div className='Controls'>
-              <img src={logo} alt='Logo' className='LogoImg' />
+              <img src={logo} alt='Logo' />
               <form onSubmit={this.handleSubmit} className='Form'>
                 <div className='FormRow'>
                   <label htmlFor='product' className='FormLabel'>
