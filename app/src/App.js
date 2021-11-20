@@ -13,6 +13,7 @@ export default class App extends React.Component {
       destination: '',
       quantity: 0,
       data: Data,
+      filteredData: [],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,12 +30,35 @@ export default class App extends React.Component {
     const filteredData = this.state.data.filter((row) => {
       return row.Product.toLowerCase().includes(productQuery);
     });
-    console.log(filteredData);
+    this.setState({
+      filteredData,
+    });
   }
 
   render() {
     //console.log(this.state.data);
-    const { product, destination, quantity } = this.state;
+    const { product, destination, quantity, filteredData } = this.state;
+    console.log(filteredData);
+    const vendorTable = (
+      <table>
+        <tbody>
+          <tr>
+            <th>Vendor</th>
+            <th>Price (€)</th>
+            <th>CO2 emissions </th>
+          </tr>
+          {filteredData.map((row, index) => {
+            return (
+              <tr key={index}>
+                <td>{row.vendor}</td>
+                <td>{row.average_price}</td>
+                <td>99</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    );
 
     return (
       <div className='App'>
@@ -107,6 +131,7 @@ export default class App extends React.Component {
               />
             </div>
           </form>
+          {vendorTable}
         </div>
       </div>
     );
