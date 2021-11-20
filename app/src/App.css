@@ -59,11 +59,20 @@
 .FormSubmitButton {
 }
 
+.Error {
+  font-size: 2em;
+  padding-top: 10em;
+  align-self: center;
+}
+
 .VendorData {
   overflow-y: scroll;
   height: 100%;
   display: flex;
   border: none;
+  flex-direction: column;
+  padding-top: 2em;
+  flex: 1;
 }
 
 tr:nth-child(even) {
@@ -87,5 +96,17 @@ tr:hover {
 }
 
 .VendorTable {
+  display: flex;
+  align-self: center;
   flex: 1;
+}
+
+.VendorTableHeader > th {
+  padding: 0.3em;
+}
+
+.BestVendorData {
+  flex: 1;
+  height: 100px;
+  padding: 1em;
 }
