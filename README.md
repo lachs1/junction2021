@@ -2,7 +2,7 @@
 
 ![Preview](img/preview.png)
 
-Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and [Sievo](https://sievo.com/) is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: approximately 80% of all CO2 emissions can be linked to procurement supply chain [[1]](https://blog.sievo.com/sievo-launches-solution-to-track-carbon-footprint-across-the-supply-chain). In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
+Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and [Sievo](https://sievo.com/) is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: approximately 80% of all CO2 emissions can be linked to the procurement supply chain [[1]](https://blog.sievo.com/sievo-launches-solution-to-track-carbon-footprint-across-the-supply-chain). In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
 
 We built a working prototype application with a graphical user interface (GUI), that solves a real business need. The prototype allows Sievo's customers to browse their possible procurement options. Our solution combines internal vendor and product data with external emission data. The most challenging part of this project was that the external data is hard to match with the internal data since they use different labels for the same product category. First, we attempted to process the data automatically. However, we noticed that this was a bit too time-consuming for a hackathon, so we decided to combine a small dataset by hand and work with that since, after all, our goal was to visualize our idea with a GUI.
 
@@ -19,7 +19,7 @@ Even though we managed to implement a prototype project, some further improvemen
 
 - Automatic data preprocessing using AI & Machine Learning,
 - Automatic transport specific distance calculations between vendor and buyer,
-- An algorithm that suggests the shortest route implying lower CO2 emissions.
+- An algorithm that suggests the shortest route which implies lower CO2 emissions.
 
 ## Instructions on how to run the project locally
 
