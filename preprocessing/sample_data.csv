@@ -1,4 +1,4 @@
-﻿vendor;product;average_price;document_id;product_id;vendor_id;vendor_city;vendor_country;category_L1;category_L2;ActivityId;Process;Ref. Unit;CO2eq_kg;Product;UOM;CO2-eq kg;distance
+﻿vendor;product;average_price;document_id;product_id;vendor_id;vendor_city;vendor_country;category_L1;category_L2;ActivityId;Process;Ref. Unit;CO2_kg_EUR;Product;UOM;CO2_kg_kg;distance
 Crown Commercial Polska Sp.z.o.o.;ALUMINUM ADVTTQ.;19.999999996426084;DOC20A6CCA4521;25;36;Goleniow;PL;Packaging;Metal;3;Aluminium and aluminium products;EUR;0.928844365;aluminium alloy. AlMg3;kg;6.10472372176663;957
 Povazsky cukor a.s.;CRYSTAL SUGAR LTCBUB.;0.6999999999412815;DOC2C57D1F829D;304;30;Trencianska Tepla;SK;Raw Materials;Sweeteners;71;Sugar;EUR;0.339257186;sugar. from sugar beet;kg;0.547595322389136;1331
 VETROPACK AUSTRIA GMBH;GLASS JAR HRZVWY.;1.0599999999543952;DOC28CBEB5AAD9;198;32;POECHLARN;AT;Packaging;Glass;29;Glass and glass products;EUR;0.944473135;packaging glass. brown;kg;0.925963816017004;1471
