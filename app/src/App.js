@@ -5,6 +5,8 @@ import logo from './img/sievo-sustainable-solutions-transparent.png';
 
 import Data from './data/sievo_spend_data_preprocessed.json';
 
+const API_URL = "https://www.distance24.org/route.json"
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,14 @@ export default class App extends React.Component {
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  componentDidMount() {
+    fetch(API_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+    })
   }
 
   handleSubmit(event) {
