@@ -5,6 +5,8 @@ import logo from './img/sievo-sustainable-solutions-transparent.png';
 
 import Data from './data/sievo_spend_data_preprocessed.json';
 
+const API_URL = "https://www.distance24.org/route.json"
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +25,14 @@ export default class App extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  componentDidMount() {
+    fetch(API_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+    })
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     let productQuery = this.state.product.toLowerCase();
@@ -30,6 +40,7 @@ export default class App extends React.Component {
       return row.Product.toLowerCase().includes(productQuery);
     });
     console.log(filteredData);
+    console.log(this.state.destination)
   }
 
   render() {
