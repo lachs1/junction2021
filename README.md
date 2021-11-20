@@ -1,5 +1,7 @@
 # Junction Hackathon 2021
 
+![Preview](img/preview.png)
+
 Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and Sievo is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: nearly 10% of all global CO2 emissions come from logistics activities. In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
 
 We built a working prototype application with a graphical user interface (GUI), that solves a real business need. The prototype allows Sievo's customers to browse their possible procurement options. Our solution combines internal vendor and product data with external emission data. The most challenging part of this project was that the external data is hard to match with the internal data since they use different labels for the same data category. Thus, we tried to do some automatic preprocessing for the data. However, we noticed that this was too time-consuming for a hackathon, so we decided to combine a small dataset by hand and work with that since, after all, our goal was to visualize our idea with a GUI.
