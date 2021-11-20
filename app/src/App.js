@@ -4,6 +4,7 @@ import './App.css';
 import logo from './img/sievo-sustainable-solutions-transparent.png';
 import Data from './data/sievo_spend_data_preprocessed.json';
 
+
 import { Pie, Bar } from 'react-chartjs-2';
 
 export default class App extends React.Component {
@@ -203,7 +204,7 @@ export default class App extends React.Component {
         <div className='Dashboard'>
           <div className='Wrapper'>
             <div className='Controls'>
-              <img src={logo} alt='Logo' height={80} />
+              <img src={logo} alt='Logo' className='LogoImg' />
               <form onSubmit={this.handleSubmit} className='Form'>
                 <div className='FormRow'>
                   <label htmlFor='product' className='FormLabel'>
@@ -320,3 +321,4 @@ export default class App extends React.Component {
     );
   }
 }
+
