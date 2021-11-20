@@ -4,7 +4,6 @@ import './App.css';
 import logo from './img/sievo-sustainable-solutions-transparent.png';
 import Data from './data/sievo_spend_data_preprocessed.json';
 
-
 import { Pie, Bar } from 'react-chartjs-2';
 
 export default class App extends React.Component {
@@ -321,4 +320,3 @@ export default class App extends React.Component {
     );
   }
 }
-
