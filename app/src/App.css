@@ -7,10 +7,23 @@
 
 .Sidebar {
   background-color: #1a3349;
-  width: 55px;
   height: 100%;
 }
 
+.SidebarButton {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.SidebarButton:hover {
+  background-color: rgb(223, 245, 113);
+  color: black;
+}
 .Dashboard {
   width: 100%;
   background-color: #f3f2f2;

@@ -39,7 +39,17 @@ export default class App extends React.Component {
 
     return (
       <div className='App'>
-        <div className='Sidebar'></div>
+        <div className='Sidebar'>
+          <div className='SidebarButton'>
+            ☰<div>More</div>
+          </div>
+          <div className='SidebarButton'>
+            🌿 <div>Vendors</div>
+          </div>
+          <div className='SidebarButton'>
+            🧾 <div>History</div>
+          </div>
+        </div>
         <div className='Dashboard'>
           <img src={logo} alt='Logo' height={80} />
           <form onSubmit={this.handleSubmit} className='Form'>
