@@ -1,4 +1,5 @@
 from collections import defaultdict
+import json
 import csv
 
 if __name__ == "__main__":
@@ -40,21 +41,26 @@ if __name__ == "__main__":
                 average_prices[key]["vendor"] = vendor
                 average_prices[key]["product"] = product
 
+    data = []
+    for _, values in average_prices.items():
+        data.append(values)
 
-    with open("sievo_spend_data_preprocessed.csv", "w", newline="") as csv_file:
-        fieldnames = [
-            "vendor",
-            "product",
-            "average_price",
-            "document_id",
-            "product_id",
-            "vendor_id",
-            "vendor_city",
-            "vendor_country",
-            "category_L1",
-            "category_L2",
-        ]
-        writer = csv.DictWriter(csv_file, fieldnames=fieldnames, delimiter=";")
-        writer.writeheader()
-        for _, values in average_prices.items():
-            writer.writerow(values)
+    with open('sievo_spend_data_preprocessed.json', 'w') as f:
+        json.dump(data , f)
+   # with open("sievo_spend_data_preprocessed.csv", "w", newline="") as csv_file:
+   #     fieldnames = [
+   #         "vendor",
+   #         "product",
+   #         "average_price",
+   #         "document_id",
+   #         "product_id",
+   #         "vendor_id",
+   #         "vendor_city",
+   #         "vendor_country",
+   #         "category_L1",
+   #         "category_L2",
+   #     ]
+   #     writer = csv.DictWriter(csv_file, fieldnames=fieldnames, delimiter=";")
+   #     writer.writeheader()
+   #     for _, values in average_prices.items():
+   #         writer.writerow(values)
