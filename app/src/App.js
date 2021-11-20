@@ -10,8 +10,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       product: '',
-      from: '',
-      to: '',
+      destination: '',
       quantity: 0,
       data: Data,
     };
@@ -35,7 +34,7 @@ export default class App extends React.Component {
 
   render() {
     //console.log(this.state.data);
-    const { product, from, to, quantity } = this.state;
+    const { product, destination, quantity } = this.state;
 
     return (
       <div className='App'>
@@ -70,33 +69,17 @@ export default class App extends React.Component {
               ></input>
             </div>
             <div className='FormRow'>
-              <label htmlFor='from' className='FormLabel'>
-                From
+              <label htmlFor='destination' className='FormLabel'>
+                Destination
               </label>
               <input
                 type='text'
-                id='from'
-                name='from'
-                placeholder='Austria'
-                minLength={1}
-                maxLength={30}
-                value={from}
-                onChange={this.handleChange}
-                className='FormInput'
-              ></input>
-            </div>
-            <div className='FormRow'>
-              <label htmlFor='to' className='FormLabel'>
-                To
-              </label>
-              <input
-                type='text'
-                id='to'
-                name='to'
+                id='destination'
+                name='destination'
                 placeholder='Finland'
                 minLength={1}
                 maxLength={30}
-                value={to}
+                value={destination}
                 onChange={this.handleChange}
                 className='FormInput'
               ></input>
