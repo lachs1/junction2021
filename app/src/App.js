@@ -26,18 +26,22 @@ export default class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.product);
+    let productQuery = this.state.product.toLowerCase();
+    const filteredData = this.state.data.filter((row) => {
+      return row.Product.toLowerCase().includes(productQuery);
+    });
+    console.log(filteredData);
   }
 
   render() {
-    console.log(this.state.data);
+    //console.log(this.state.data);
     const { product, from, to, quantity } = this.state;
 
     return (
       <div className='App'>
         <div className='Sidebar'></div>
         <div className='Dashboard'>
-          <img src={logo} alt='Logo' height={60} />
+          <img src={logo} alt='Logo' height={80} />
           <form onSubmit={this.handleSubmit} className='Form'>
             <div className='FormRow'>
               <label htmlFor='product' className='FormLabel'>
