@@ -22,3 +22,10 @@ Improvement ideas:
 - Automatic data preprocessing using AI & Machine Learning
 - Automatic transport specific distance calculations between vendor and buyer
 - Algorithm that suggests the shortest route implying lower CO2 emissions
+
+## How to run the project
+
+1. clone the reporsitory to your device
+2. cd into the project directory */junction2021/app*
+3. install the needed dependencies with the command ```npm install```
+4. start the development server with the command ```npm start```
