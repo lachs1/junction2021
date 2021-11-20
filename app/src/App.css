@@ -43,7 +43,7 @@
   background-color: white;
   border-radius: 0.5em;
   -webkit-box-shadow: 5px 5px 40px -6px #000000;
-  box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #c2c2c2;
 }
 
 .Form {
@@ -80,11 +80,11 @@
   border: none;
   flex-direction: column;
   flex: 1;
-  
+
   background-color: white;
   border-radius: 0.5em;
   -webkit-box-shadow: 5px 5px 40px -6px #000000;
-  box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #c2c2c2;
   overflow-y: scroll;
 }
 
@@ -120,6 +120,9 @@ tr:hover {
 
 .VendorTableHeader > th {
   padding: 0.3em;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .BestVendorDataWrapper {
@@ -130,7 +133,7 @@ tr:hover {
   background-color: white;
   border-radius: 0.5em;
   -webkit-box-shadow: 5px 5px 40px -6px #000000;
-  box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #c2c2c2;
 }
 
 .BestVendorData {
@@ -150,11 +153,15 @@ tr:hover {
   background-color: white;
   border-radius: 0.5em;
   -webkit-box-shadow: 5px 5px 40px -6px #000000;
-  box-shadow: 5px 5px 40px -6px #000000;
+  box-shadow: 5px 5px 40px -6px #c2c2c2;
   width: 100%;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 0;
+}
+
+.LogoImg {
+  width: 28%;
 }

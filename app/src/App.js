@@ -10,8 +10,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: 'tomato',
-      quantity: 10,
+      product: '',
+      quantity: 1,
       data: Data,
       filteredData: [],
       selectedIndex: 0,
@@ -145,8 +145,10 @@ export default class App extends React.Component {
         datasets: [
           {
             data: [
-              filteredData[selectedIndex].co2_kg_kg,
-              filteredData[selectedIndex].min,
+              filteredData[selectedIndex]
+                ? filteredData[selectedIndex].co2_kg_kg
+                : 0,
+              filteredData[selectedIndex] ? filteredData[selectedIndex].min : 0,
             ],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -163,9 +165,15 @@ export default class App extends React.Component {
           {
             label: [],
             data: [
-              filteredData[selectedIndex].transport.air,
-              filteredData[selectedIndex].transport.truck,
-              filteredData[selectedIndex].transport.sea,
+              filteredData[selectedIndex]
+                ? filteredData[selectedIndex].transport.air
+                : 0,
+              filteredData[selectedIndex]
+                ? filteredData[selectedIndex].transport.truck
+                : 0,
+              filteredData[selectedIndex]
+                ? filteredData[selectedIndex].transport.sea
+                : 0,
             ],
             backgroundColor: [
               'rgba(75, 192, 192, 0.2)',
@@ -203,7 +211,7 @@ export default class App extends React.Component {
         <div className='Dashboard'>
           <div className='Wrapper'>
             <div className='Controls'>
-              <img src={logo} alt='Logo' height={80} />
+              <img src={logo} alt='Logo' className='LogoImg' />
               <form onSubmit={this.handleSubmit} className='Form'>
                 <div className='FormRow'>
                   <label htmlFor='product' className='FormLabel'>
@@ -216,6 +224,7 @@ export default class App extends React.Component {
                     placeholder='Tomato'
                     minLength={1}
                     maxLength={30}
+                    required
                     value={product}
                     onChange={this.handleChange}
                     className='FormInput'
@@ -242,6 +251,8 @@ export default class App extends React.Component {
                     type='number'
                     id='quantity'
                     name='quantity'
+                    required
+                    min='1'
                     minLength={1}
                     maxLength={30}
                     value={quantity}
@@ -258,7 +269,11 @@ export default class App extends React.Component {
           <div className='Wrapper'>
             <div className='BestVendorDataBox'>
               {product && quantity ? (
-                <h2>{filteredData[selectedIndex].vendor}</h2>
+                <h2>
+                  {filteredData[selectedIndex]
+                    ? filteredData[selectedIndex].vendor
+                    : ''}
+                </h2>
               ) : (
                 <div className='Error'>
                   Please select a product and quantity.
