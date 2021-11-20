@@ -45,6 +45,7 @@ export default class App extends React.Component {
       if (row.Product.toLowerCase().includes(product.toLowerCase())) {
         let o = {
           vendor: row.vendor,
+          vendor_country: row.vendor_country,
           product: row.product,
         };
         let price = row.average_price * quantity;
@@ -86,23 +87,27 @@ export default class App extends React.Component {
     console.log(filteredData);
 
     const vendorTable = (
-      <table className='VendorTable'>
+      <table className='VendorTable' cellspacing='1' cellpadding='1'>
         <tbody>
           <tr>
-            <th>Vendor</th>
             <th>Product</th>
-            <th>Average price (€)</th>
+            <th>Vendor</th>
+            <th>Vendor country</th>
+            <th>Price estimate (€)</th>
             <th>Product CO₂ emissions (kg)</th>
             <th>Transport CO₂ emissions (kg)</th>
             <th>Total CO₂ emissions (kg)</th>
           </tr>
           {filteredData.map((row, index) => {
             return (
-              <tr key={index}>
-                <td>{row.vendor}</td>
+              <tr key={index} className={index == 0 ? 'VendorTableBest' : ''}>
                 <td>{row.product}</td>
-                <td>{row.price.toFixed(1)}</td>
-                <td>{row.co2_kg_kg.toFixed(1)}</td>
+                <td>{row.vendor}</td>
+                <td className='VendorTableCenter'>{row.vendor_country}</td>
+                <td className='VendorTableCenter'>{row.price.toFixed(1)}</td>
+                <td className='VendorTableCenter'>
+                  {row.co2_kg_kg.toFixed(1)}
+                </td>
                 <td>
                   <div>Air cargo: {row.transport.air.toFixed(1)}</div>
                   <div>Sea cargo: {row.transport.sea.toFixed(1)}</div>

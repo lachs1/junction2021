@@ -63,6 +63,27 @@
   overflow-y: scroll;
   height: 100%;
   display: flex;
+  border: none;
+}
+
+tr:nth-child(even) {
+  background: rgb(235, 235, 235);
+}
+tr:nth-child(odd) {
+  background: #fff;
+}
+
+tr:hover {
+  background-color: rgb(209, 240, 199);
+  cursor: pointer;
+}
+
+.VendorTableCenter {
+  text-align: center;
+}
+
+.VendorTableBest {
+  background-color: rgb(141, 196, 86) !important;
 }
 
 .VendorTable {
