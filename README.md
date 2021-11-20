@@ -2,7 +2,7 @@
 
 ![Preview](img/preview.png)
 
-Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and Sievo is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: nearly 10% of all global CO2 emissions come from logistics activities. In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
+Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and [Sievo](https://sievo.com/) is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: nearly 10% of all global CO2 emissions come from logistics activities. In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
 
 We built a working prototype application with a graphical user interface (GUI), that solves a real business need. The prototype allows Sievo's customers to browse their possible procurement options. Our solution combines internal vendor and product data with external emission data. The most challenging part of this project was that the external data is hard to match with the internal data since they use different labels for the same data category. Thus, we tried to do some automatic preprocessing for the data. However, we noticed that this was too time-consuming for a hackathon, so we decided to combine a small dataset by hand and work with that since, after all, our goal was to visualize our idea with a GUI.
 
@@ -15,7 +15,7 @@ The first step in the project for us was to look at the internal dataset and fig
 
 Our hand-made sample dataset was first processed with Microsoft Excel after which we used Python to export it as a Javascript Object-Notation (JSON) file since it is then easy to work with JavaScript.
 
-After making the sample dataset we started building the prototype GUI. We used React.js to implement all the GUI and visual data presentations. We made an automatic ranking system that ranks and recommends the most sustainable suppliers based on the CO2 emission, but also pricing. The most sustainable procurement option is highlighted in green. Our GUI also produces a visualization of the chosen procurement option. It shows the CO2 emission contributions caused by production and transportation. Also, it serarates the transportation type specific CO2 emissions.
+After making the sample dataset we started building the prototype GUI. We used React.js to implement all the GUI and visual data presentations. We made an automatic ranking system that ranks and recommends the most sustainable suppliers based on the CO2 emission, but also pricing. The most sustainable procurement option is highlighted in green. Our GUI also produces a visualization of the chosen procurement option. It shows the CO2 emission contributions caused by production and transportation. Also, it serarates the transportation type specific CO2 emissions (air, sea and truck cargo).
 
 Improvement ideas:
 
@@ -26,6 +26,6 @@ Improvement ideas:
 ## How to run the project
 
 1. clone the reporsitory to your device
-2. cd into the project directory */junction2021/app*
-3. install the needed dependencies with the command ```npm install```
-4. start the development server with the command ```npm start```
+2. cd into the project directory _/junction2021/app_
+3. install the needed dependencies with the command `npm install`
+4. start the development server with the command `npm start`
