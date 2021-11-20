@@ -2,7 +2,7 @@
 
 ![Preview](img/preview.png)
 
-Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and [Sievo](https://sievo.com/) is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: nearly 10% of all global CO2 emissions come from logistics activities [[1]](https://www.tendereasy.com/en/resources/blog/getting-co2-emissions-calculations-right-for-freight-procurement/). In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
+Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and [Sievo](https://sievo.com/) is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: approximately 80% of all CO2 emissions can be linked to procurement supply chain [[1]](https://blog.sievo.com/sievo-launches-solution-to-track-carbon-footprint-across-the-supply-chain). In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
 
 We built a working prototype application with a graphical user interface (GUI), that solves a real business need. The prototype allows Sievo's customers to browse their possible procurement options. Our solution combines internal vendor and product data with external emission data. The most challenging part of this project was that the external data is hard to match with the internal data since they use different labels for the same product category. First, we attempted to process the data automatically. However, we noticed that this was a bit too time-consuming for a hackathon, so we decided to combine a small dataset by hand and work with that since, after all, our goal was to visualize our idea with a GUI.
 
@@ -24,6 +24,6 @@ Even though we managed to implement a prototype project, some further improvemen
 ## Instructions on how to run the project locally
 
 1. clone the repository to your device
-2. cd into the project directory */junction2021/app*
+2. cd into the project directory _/junction2021/app_
 3. install the needed dependencies with the command `npm install`
 4. start the development server with the command `npm start`
