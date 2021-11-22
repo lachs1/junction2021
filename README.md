@@ -1,5 +1,7 @@
 # Junction Hackathon 2021
 
+**🎉🥂 1st place in Sievo's challenge: Lead the sustainable future!**
+
 ![Preview](previews/preview.png)
 
 Which vendor should a customer choose when buying a certain product, in order to get it as cheap as possible? This process of buying stuff for business purposes is called procurement and [Sievo](https://sievo.com/) is specialized in procurement analytics software. However, nowadays CO2 emissions have been an increasing concern and business level actions have a huge impact on the emissions: approximately 80% of all CO2 emissions can be linked to the procurement supply chain [[1]](https://blog.sievo.com/sievo-launches-solution-to-track-carbon-footprint-across-the-supply-chain). In this challenge, we explored ways to improve Sievo's procurement software so that it takes into account the pricing, but also the CO2 emissions that are caused by the manufacturing process of the product as well as by the transportation.
